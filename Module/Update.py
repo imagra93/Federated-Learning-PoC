@@ -87,9 +87,8 @@ class LocalUpdate(object):
                 loss.backward()
                 optimizer.step()
 
-                if batch_index == len(self.trainloader) - 1:
-                    print(f'| Global Round : {global_round} | Client index : {client} | Local Epoch : {iter} | ' +  \
-                          f'\tLoss: {loss.item():.3f}')
+                #if batch_index == len(self.trainloader) - 1:
+                    #print(f'| Global Round : {global_round} | Client index : {client} | Local Epoch : {iter} | \tLoss: {loss.item():.3f}')
                
                 batch_loss.append(loss.item())
             epoch_loss.append(sum(batch_loss)/len(batch_loss))
